@@ -3,6 +3,7 @@
  */
 
 import TestController from './controllers/TestController';
+import WatsonController from './controllers/WatsonController';
 
 export default {
   '/test': {
@@ -10,5 +11,17 @@ export default {
       method: TestController.testMethod,
       public: true,
     },
+  },
+  '/translate': {
+    get: {
+      method: WatsonController.translate,
+      public: true,
+    },
+  },
+  '/history': {
+    get: {
+      method: WatsonController.history,
+      pubblic: true,
+    }
   },
 };
